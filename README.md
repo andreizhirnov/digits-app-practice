@@ -1,22 +1,9 @@
-### Building and running your application
+# An application used to recognize a handwritten digit
 
-When you're ready, start your application by running:
-`docker compose up --build`.
+This repository includes:
+- The estimates of an NN model in the ONNX format. This model was trained using PyTorch on the MNIST dataset.
+- A Streamlit app that can process handwritten digits to guess which digit has been drawn and will commit the results to a Postgres database
+- A Dockefile and a docker-compose file that can be used to create a Docker image of the app and run it together with a database
 
-Your application will be available at http://localhost:8000.
-
-### Deploying your application to the cloud
-
-First, build your image, e.g.: `docker build -t myapp .`.
-If your cloud uses a different CPU architecture than your development
-machine (e.g., you are on a Mac M1 and your cloud provider is amd64),
-you'll want to build the image for that platform, e.g.:
-`docker build --platform=linux/amd64 -t myapp .`.
-
-Then, push it to your registry, e.g. `docker push myregistry.com/myapp`.
-
-Consult Docker's [getting started](https://docs.docker.com/go/get-started-sharing/)
-docs for more detail on building and pushing.
-
-### References
-* [Docker's Python guide](https://docs.docker.com/language/python/)
+A live version of the app can be accessed here: [http://116.202.108.139:80/](http://116.202.108.139:80/)
+ 
