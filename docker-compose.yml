@@ -14,7 +14,7 @@ services:
     build:
       context: .
     ports:
-      - "443:8501/tcp"
+      - "80:8501/tcp"
     depends_on:
       db:
         condition: service_healthy
